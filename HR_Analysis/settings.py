@@ -27,9 +27,7 @@ SECRET_KEY = 'django-insecure-e3=4h8sunh&=i6uh7yr%j%y#n85nf$g#_3%)tsdabiiuid^*rj
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = [
-    'hr-analytics485.herokuapp.com'
-]
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -129,7 +127,6 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
