@@ -1,0 +1,83 @@
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    td,
+    th {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    tr:hover {
+        background-color: #ddd;
+    }
+
+    th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #4CAF50;
+        color: white;
+    }
+
+    a {
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin-top: 8px;
+        margin-right: 144px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        text-decoration: none;
+        text-align: right;
+    }
+
+    h2 {
+        text-align: center;
+    }
+</style>
+
+<h2>Database</h2>
+<table id="dashboard">
+    <tr>
+        <th>TRAINING HOURS</th>
+        <th>CITY DEVELOPMENT INDEX</th>
+        <th>EXPERIENCE</th>
+        <th>LAST NEW JOB</th>
+        <th>COMPANY SIZE</th>
+        <th>EDUCATION LEVEL</th>
+        <th>MAJOR</th>
+        <th>COMPANY TYPE</th>
+        <th>RELEVANT EXPERIENCE</th>
+        <th>PREDICTION</th>
+    </tr>
+    <tr>
+        {% for predict in object_list %}
+    </tr>
+    <tr>
+        <td>{{ predict.training_hours }}</td>
+        <td>{{ predict.city_dev_index }}</td>
+        <td>{{ predict.experience }}</td>
+        <td>{{ predict.last_new_job }}</td>
+        <td>{{ predict.company_size }}</td>
+        <td>{{ predict.edu_level }}</td>
+        <td>{{ predict.major }}</td>
+        <td>{{ predict.company_type }}</td>
+        <td>{{ predict.relevant_experience }}</td>
+        <td>{{ predict.prediction_result }}</td>
+    </tr>
+    {% endfor %}
+</table>
+<a href="{% url 'logout' %}">Logout</a>

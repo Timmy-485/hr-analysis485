@@ -1,0 +1,15 @@
+{% extends 'predict/base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+<form class="predict" method="post">
+   {% csrf_token %}
+   {{ form|crispy}}
+   <p>Prediction: {{ result }}</p>
+   <button type="submit" class="btn btn-success">Predict</button>
+   <a href="{% url 'login' %}" class="btn btn-success">Log In</a>
+   <a href="{% url 'signup' %}" class="btn btn-success">Sign Up</a>
+   
+</form>
+{% endblock %}

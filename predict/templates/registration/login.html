@@ -1,0 +1,14 @@
+{% extends '../predict/base.html' %}
+
+{% block content %}
+<h1 class="mt-2" style="margin-bottom: 20px;">USER LOGIN</h1>
+<form method="post" action="{% url 'login' %}">
+    {% csrf_token %}
+    <label for="username">Username:</label>
+    <input type="text" name="username" placeholder="Username" style="margin-right: 20px; margin-bottom: 20px;">
+    <label for="password">Password:</label>
+    <input type="password" name="password" placeholder="Password"> <br>
+    <button type="submit" class="btn btn-success" style="margin-right: 10px; background-color: blue">Login</button>
+    <a href="{% url 'signup' %}" class="btn btn-success" style="background-color: black;">Sign Up</a>
+</form>
+{% endblock %}  
